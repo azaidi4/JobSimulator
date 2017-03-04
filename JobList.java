@@ -86,7 +86,7 @@ public class JobList implements ListADT<Job> {
         }
         Listnode<Job> temp = head;
 
-        for(int i = 0; i < pos - 1; i++){
+        for(int i = 0; i < pos; i++){
            temp = temp.getNext();
         }
         Listnode<Job> toRemove = temp.getNext();

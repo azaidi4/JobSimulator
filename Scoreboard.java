@@ -5,32 +5,26 @@ import java.util.Iterator;
  */
 public class Scoreboard implements ScoreboardADT {
     ListADT<Job> list = new JobList();
-    Iterator <Job> itr = list.iterator();
-
+    int totalPoints = 0;
 
     @Override
     public int getTotalScore() {
-        int totalPoints = 0;
-
-        while(itr.hasNext()){
-            totalPoints += itr.next().getPoints();
-        }
         return totalPoints;
     }
 
     @Override
     public void updateScoreBoard(Job job) {
-        if(job.isCompleted())
             list.add(job);
-        else
-            throw new IllegalArgumentException();
+            totalPoints += job.getPoints();
     }
 
     @Override
     public void displayScoreBoard() {
+        System.out.println("The jobs completed: ");
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("At Position: " + i + list.get(i).toString());
-
+            System.out.println("Job Name: " + list.get(i).getJobName());
+            System.out.println("Points Earned for this Job: " + list.get(i).getPoints());
+            System.out.println("--------------------------------------------");
         }
     }
 }
