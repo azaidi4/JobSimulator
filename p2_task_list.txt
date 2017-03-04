@@ -1,7 +1,7 @@
 /************************************************************
   p2 Task List (must be completed and submitted for Team Building 102)
   
-  Team Number: 16   Team Name: 00010000
+  Team Number: _________   Team Name: ____________________________
 
 In an effort to help students improve the process of learning to
 to work together in their teams and as a way to provide each team with 
@@ -49,7 +49,7 @@ Task List Usage:
   Complete this table:
   Code letter = Student name
   ---------------------------
-  Ahmad       =     A
+              = 
               =
               =
               =
@@ -57,7 +57,7 @@ Task List Usage:
               =
               =
               
-A+ Task 2: Define the JobList class so that it implements the ListADT
+- Task 2: Define the JobList class so that it implements the ListADT
   as described in p0.  List sub-tasks here.
   
     - Create an Eclipse project for p2
@@ -79,7 +79,7 @@ A+ Task 2: Define the JobList class so that it implements the ListADT
        - ...
        - ...
        
-A+ Task 3: Write a Test_JobList class 
+- Task 3: Write a Test_JobList class 
   This can be written before Task 2 is finished.
   Just write test methods that will pass when JobList is finished
   - add a main method
@@ -90,17 +90,17 @@ A+ Task 3: Write a Test_JobList class
   - test ...
   - test ...
   
-A+ Task 4: Write a JobListIterator class
+- Task 4: Write a JobListIterator class
   Make sure that it is implemented as described in the assignment.
   - add a constructor 
   - hasNext()
   - next()
   
-A+ Task 5: Add a test to your Test_JobList class to test that the 
+- Task 5: Add a test to your Test_JobList class to test that the 
   JobList can return an iterator and that the JobListIterator
   works as expected.
   
-A+ Task 6: Write the Scoreboard class so that it implements all
+- Task 6: Write the Scoreboard class so that it implements all
   required operations of the ScoreboardADT. Review the Game class
   to see how the Scoreboard class is being used.
   

@@ -25,11 +25,13 @@ public class Test_Joblist {
         System.out.println("**********************TEST REMOVE(int pos)**********************");
         jobs.remove(0);
         System.out.println("Removing JobA (index 0) ");
+        jobs.remove(2);
+        System.out.println("Removing JobD (index 2) ");
         displayJobList(jobs);
 
         System.out.println("**********************TEST ADD(int pos, Job item)**********************");
         jobs.add(1, new Job("JobX", 20, 30));
-        jobs.add(3, new Job("JobY", 15, 25));
+        jobs.add(2, new Job("JobY", 15, 25));
         displayJobList(jobs);
 
         //Testing contain()
