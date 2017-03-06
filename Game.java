@@ -1,5 +1,22 @@
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
+import java.util.Iterator;
 import java.util.Scanner;
-
+/**
+ * The Game class is responsible for maintaing the active list of jobs and 
+ * utilizes the JobSimulator class to create new jobs to be added to the 
+ * end of the job listing. 
+ * 
+ * Class allows for editing and accessing of the jobs as well.
+ *
+ */
 public class Game{
 
     /**
@@ -25,6 +42,7 @@ public class Game{
        scoreBoard = new Scoreboard();
        this.timeToPlay = timeToPlay;
        jobSimulator = new JobSimulator(seed);
+
     }
 
     /**
@@ -80,12 +98,6 @@ public class Game{
      *      The job to be inserted in the list.
      */
     public void addJob(int pos, Job item){
-        /**
-         * TODO: Add a job in the list
-         * based on position
-         */
-        if(pos < 0)
-            throw new IllegalArgumentException();   //test ExceptionHandling
 
         list.add(pos, item);
         timeToPlay -= pos;
@@ -122,13 +134,16 @@ public class Game{
      */
     public Job updateJob(int index, int duration){
 
-        if(index >= list.size() || index < 0 || duration < 0 || duration > timeToPlay)
+        if(duration < 0)
             throw new IllegalArgumentException();
 
         if(duration > timeToPlay)
             duration = timeToPlay;
 
         Job updatedJob = list.remove(index);
+        if(duration > updatedJob.getTimeUnits())
+            duration = updatedJob.getTimeUnits();
+
         updatedJob.setSteps(duration);
 
         if(updatedJob.isCompleted()) {
@@ -139,7 +154,7 @@ public class Game{
             Scanner input = new Scanner(System.in);
             System.out.println("At what position would you like to insert the job back into the list? ");
             addJob(input.nextInt(), updatedJob);
-            timeToPlay -= duration;
+            timeToPlay -= index + duration;
         }
 
         return updatedJob;
@@ -154,9 +169,12 @@ public class Game{
      *
      */
     public void displayActiveJobs(){
+        int i = 0;
+        Iterator<Job> itr = list.iterator();
         System.out.println("Job Listing");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("At position: " + i + " " + list.get(i).toString());
+        while(itr.hasNext()){
+            System.out.println("At position: " + i + " " + itr.next().toString());
+            i++;
         }
 
     }

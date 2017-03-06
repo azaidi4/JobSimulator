@@ -1,5 +1,18 @@
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
 import java.util.Scanner;
-
+/**
+ * The GameApp class is responsible for the program execution and the main 
+ * game loop. Houses code for executing the game itself.
+ *
+ */
 public class GameApp{
     /**
      * Scanner instance for reading input from console
@@ -31,19 +44,21 @@ public class GameApp{
         int timeToPlay = Integer.parseInt(args[1]);
 
         try {
-
             if (seed <= 0 || timeToPlay <= 0 || args.length != 2)
                 throw new IllegalArgumentException();
 
             GameApp gameApp = new GameApp(seed, timeToPlay);
             gameApp.mainMenuLoop();
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println("Illegal argument entered. Exiting...");
+        }  catch (IndexOutOfBoundsException e) {
+            System.out.println("Invalid index entered. Exiting...");
         }
     }
 
     /**
-     * Add Comments as per implementation
+     * Starts the game. Keeps getting looped by mainMenuLoop until the game
+     * runs out of time.
      */
     private void start(){
 
@@ -79,7 +94,12 @@ public class GameApp{
         }
         return STDIN.nextInt();
     }
-
+    /**
+     * Method responsible for having game continue until, the respective proper time
+     * to end. 
+     * 
+     * Prints "Game Over" message and final total score.
+     */
     public void mainMenuLoop(){
         while(!playedGame.isOver()){
             start();

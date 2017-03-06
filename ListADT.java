@@ -1,3 +1,18 @@
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016 
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
+/**
+ * The ListADT interface creates the ADT for List. 
+ * @author 
+ *
+ * @param <E> 
+ */
 public interface ListADT<E> extends Iterable<E>{
 
     /** Adds an item at the end of the list
