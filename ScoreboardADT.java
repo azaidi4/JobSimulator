@@ -1,4 +1,18 @@
-	public interface ScoreboardADT {
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016 
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
+/**
+ * The ScoreboardADT interface is responsible for creating the ADT for 
+ * Scoreboard. 
+ *
+ */
+public interface ScoreboardADT {
 		 /**
 	     * Calculates the total combined number of points for every job in the scoreboard.
 	     * 

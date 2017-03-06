@@ -1,3 +1,12 @@
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016 
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
 /**
  * Consists of all the variable used by the simulator class
  * to generate jobs automatically

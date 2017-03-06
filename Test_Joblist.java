@@ -1,9 +1,16 @@
+/////////////////////////////////////////////////////////////////////////////
+//Semester:         CS367 Spring 2016
+//PROJECT:          Program 2: Welcome to the Job Market
+//FILE:             Scoreboard.java
+//
+//TEAM:    Team 16: 00010000
+//Authors: Team 16
+//
+////////////////////////////80 columns wide //////////////////////////////////
 import java.util.Iterator;
-
 /**
  * Test class used to check if all the methods of JobList work as required.
  *
- * Created by ahmad on 2/24/2017.
  */
 public class Test_Joblist {
     /**
@@ -13,7 +20,7 @@ public class Test_Joblist {
     public static void main(String[] args) {
         JobList jobs = new JobList();
 
-        //Create and add new Job instances to JobList
+        //Create and add new Job instances to end of JobList
         System.out.println("**********************TEST ADD(Job item)**********************");
         jobs.add(new Job("JobA", 10, 10));
         jobs.add(new Job("JobB", 11, 11));
@@ -29,6 +36,7 @@ public class Test_Joblist {
         System.out.println("Removing JobD (index 2) ");
         displayJobList(jobs);
 
+        //Create abd add bew Job instances to JobList at index pos
         System.out.println("**********************TEST ADD(int pos, Job item)**********************");
         jobs.add(1, new Job("JobX", 20, 30));
         jobs.add(2, new Job("JobY", 15, 25));
